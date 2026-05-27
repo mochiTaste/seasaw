@@ -91,12 +91,16 @@ export default function Home() {
           <div className="w-20 h-4 bg-[#6B3F1E] rounded-sm" />
         </div>
 
-        {/* こたえ表示 */}
-        {showAnswer && (
-          <div className="mt-4 px-6 py-3 bg-[#fff3cd] border-4 border-[#ffc107] rounded-2xl text-2xl md:text-3xl font-black text-[#e05c00] text-center shadow-md">
-            {answerText}
+        {/* こたえ表示（高さを常に確保してレイアウトシフトを防ぐ） */}
+        <div className="mt-4 h-16 flex items-center justify-center">
+          <div
+            className="px-6 py-3 bg-[#fff3cd] border-4 border-[#ffc107] rounded-2xl text-2xl md:text-3xl font-black text-[#e05c00] text-center shadow-md
+              transition-opacity duration-300"
+            style={{ opacity: showAnswer ? 1 : 0, pointerEvents: showAnswer ? "auto" : "none" }}
+          >
+            {answerText || "　"}
           </div>
-        )}
+        </div>
       </div>
 
       {/* 先生用操作パネル */}
