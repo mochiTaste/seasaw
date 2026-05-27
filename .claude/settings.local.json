@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill /PID 26556 /F)",
+      "PowerShell(Stop-Process -Id 26556 -Force)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

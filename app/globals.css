@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+body {
+  background: #fef9ee;
+  font-family: 'Hiragino Maru Gothic Pro', 'BIZ UDPGothic', 'Rounded Mplus 1c', Arial, sans-serif;
+}
